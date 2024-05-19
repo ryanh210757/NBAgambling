@@ -9,16 +9,12 @@ export default function PlaceBet(props){
     console.log(teamName)
     console.log(odds)
     const onSubmit = async () => {
-    
         const data = {
             teamName,
             odds,
             wager,
             payout
         }
-
-
-        
         console.log(data)
 
         const url = "http://127.0.0.1:5000/place_bet"
@@ -45,6 +41,6 @@ export default function PlaceBet(props){
             }}/>
           <input id="payout"  type="text" placeholder="To win" value={payout} />
           <button onClick={() => onSubmit()}>Bet Now</button>
-         </div>
+        </div>
     )
 }
